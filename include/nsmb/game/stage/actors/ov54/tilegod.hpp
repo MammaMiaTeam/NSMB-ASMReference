@@ -72,7 +72,7 @@ public:
 	u32 tilesHeight;
 	bool32 createFirst;
 	BlockType blockType;
-	bool32 permanent;
+	bool32 singleUse; 			// if true actor gets destroyed after being activated once
 	PatternType patternType;
 	bool16 keepActive;
 	s8 updateStep;
