@@ -51,6 +51,10 @@
 #include "stage/actors/ov34/fencekoopa.hpp"
 #include "stage/actors/ov34/whomp.hpp"
 
+// Overlay 40 - BossController, Peach
+#include "stage/actors/ov40/bosscontroller.hpp"
+#include "stage/actors/ov40/peach.hpp"
+
 // Overlay 42 - BulletBill, BanzaiBill, BulletBillBlaster, BanzaiBillBlaster
 #include "stage/actors/ov42/bulletbill.hpp"
 #include "stage/actors/ov42/bulletbillblaster.hpp"

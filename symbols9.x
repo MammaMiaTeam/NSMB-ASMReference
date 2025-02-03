@@ -178,6 +178,7 @@ NNSi_G3dFuncSbc_BB = 0x20595B0;
 NNS_G3dDraw1Mat1Shp = 0x2059950;
 NNS_G3dResDefaultSetup = 0x2059B68;
 NNS_G3dInit = 0x2059DC0;
+NNS_G3dRenderObjInit = 0x02057dc4;
 NNS_G3dGetCurrentMtx = 0x2059DF0;
 NNS_G3dGetTex = 0x205A340;
 NNS_G3dGetMdlSet = 0x205A380;
@@ -2038,6 +2039,8 @@ _ZN4Math4lerpER4Vec3RKS0_l = 0x02043e30;
 _ZN4Math8lerpFx32ERllll = 0x020437a4;
 _ZN4Math8lerpFx32ERlllll = 0x020437f4;
 _ZN4Math4lerpER4Vec2RKS0_l = 0x02043d5c;
+_ZN4Math4lerpERssss = 0x02043604;
+_ZN4Math4lerpERsssss = 0x02043674;
 _ZN4Math6sqrt64Ex = 0x02046030;
 _ZN4Math5atan2Ell = 0x02043b6c;
 _ZN4Math7inRangeElll = 0x02043750;
@@ -3411,6 +3414,17 @@ _ZN3G3D16getPaletteParamsEP13NNSG3dResTex_mRm				= 0x02019a88;
 
 _ZN3GFX9toonTableE											= 0x02085B80;
 _ZN3GFX14toonTableTimerE									= 0x02085B1C;
+_ZN3GFX12ambientColorE 										= 0x020caa2c;
+_ZN3GFX12diffuseColorE 										= 0x020caa30;
+_ZN3GFX13emissionColorE 									= 0x020caa34;
+
+/* arm9_ov0 */
+_ZN3GFX12ambientColorE   = 0x020caa2c;
+_ZN3GFX12diffuseColorE   = 0x020caa30;
+_ZN3GFX13emissionColorE  = 0x020caa34;
+_ZN3GFX12lightVectorsE   = 0x020caa84;
+_ZN3GFX11lightColorsE    = 0x020caa40;
+_ZN3GFX12setMatColorsEv  = 0x020a3ad8;
 
 
 /* arm9 */
@@ -4812,6 +4826,8 @@ _ZN5Stage15actorFreezeFlagE							= 0x020ca850;
 _ZN5Stage25phantomHandsTargetEnabledE				= 0x020ca874;
 _ZN5Stage23phantomHandsDisableMaskE					= 0x020ca8b0;
 _ZN5Stage18phantomHandsTargetE						= 0x020ca918;
+_ZN5Stage11spawnObjectEmmPK4Vec3 					= 0x0209c178;
+_ZN5Stage13objectIDTableE 							= 0x020c22b8;
 
 /* arm9_ov11 */
 _ZN5Stage16anmTilesOamTableE						= 0x0212f180;
@@ -6683,6 +6699,81 @@ _ZN5Whomp6sBreakE							= 0x021454D4;
 _ZTV5Whomp									= 0x02145394;
 
 
+/* arm9_ov40 */
+/*----------------------------------------------------------------*/
+/*------------------------ boss controller -----------------------*/
+/*----------------------------------------------------------------*/
+
+_ZN14BossControllerD0Ev 							= 0x02141EC0;
+_ZN14BossControllerD1Ev 							= 0x02141E80;
+_ZN14BossControllerD2Ev			 					= 0x02141E80;
+_ZN14BossController8onCreateEv 						= 0x02141F14;
+_ZN14BossController9onDestroyEv 					= 0x02141F08;
+_ZN14BossController18onCleanupResourcesEv 			= 0x02141F10;
+_ZN14BossController18onPrepareResourcesEv 			= 0x02143A70;
+_ZN14BossController10updateMainEv 					= 0x021421B4;
+_ZN14BossController13onFireballHitEv 				= 0x021439A0;
+_ZN14BossController12postRender3DEv 				= 0x021421B0;
+
+_ZN14BossController11switchStateERKMS_FbvE  		= 0x021439EC;
+_ZN14BossController11updateStateEv 					= 0x021439A4;
+_ZN14BossController16winCutsceneStateEv 			= 0x021421CC;
+_ZN14BossController11battleStateEv 					= 0x02142620;
+_ZN14BossController23commonBossCutsceneStateEv 		= 0x02142F74;
+_ZN14BossController25peteyPiranhaCutsceneStateEv 	= 0x02143190;
+_ZN14BossController22startBossCutsceneStateEv 		= 0x021433C8;
+_ZN14BossController20preBossCutsceneStateEv 		= 0x02143488;
+_ZN14BossController16battleSetupStateEv 			= 0x02143550;
+_ZN14BossController10setupStateEv 					= 0x02143634;
+
+_ZN14BossController25createLakithunderLeftWallEv 	= 0x02142B2C;
+_ZN14BossController17createBowserWallsEt 			= 0x02142BD0;
+_ZN14BossController14createLeftWallEv 				= 0x02142CB0;
+_ZN14BossController15createRightWallEv 				= 0x02142E28;
+_ZN14BossController16bindCameraToZoneEv 			= 0x02142F14;
+_ZN14BossController13loadResourcesEv 				= 0x02143B04;
+
+_ZN14BossController17resourcesHeapSizeE 			= 0x0214646C;
+_ZN14BossController12bottomSensorE 					= 0x02146474;
+_ZN14BossController16triggerDistancesE 				= 0x02146480;
+_ZN14BossController7profileE 						= 0x02146720;
+
+_ZN14BossController6sSetupE 						= 0x02146C00;
+_ZN14BossController12sBattleSetupE 					= 0x02146C08;
+_ZN14BossController12sWinCutsceneE 					= 0x02146C10;
+_ZN14BossController7sBattleE 						= 0x02146C18;
+_ZN14BossController19sCommonBossCutsceneE 			= 0x02146C20;
+_ZN14BossController21sPeteyPiranhaCutsceneE			= 0x02146C28;
+_ZN14BossController18sStartBossCutsceneE 			= 0x02146C30;
+_ZN14BossController16sPreBossCutsceneE 				= 0x02146C38;
+
+_ZTV14BossController = 0x0214672C;
+
+
+/* arm9_ov40 */
+/*----------------------------------------------------------------*/
+/*----------------------------- peach ----------------------------*/
+/*----------------------------------------------------------------*/
+
+_ZN5PeachD0Ev                     = 0x02143C20;
+_ZN5PeachD1Ev                     = 0x02143B94;
+_ZN5Peach8onCreateEv              = 0x02143E34;
+_ZN5Peach8onRenderEv              = 0x02143CB4;
+_ZN5Peach18onPrepareResourcesEv   = 0x02144CC0;
+_ZN5Peach10updateMainEv           = 0x02144008;
+_ZN5Peach9callStateEv             = 0x02144024;
+_ZN5Peach11switchStateERKMS_FbvEm = 0x02144BC8;
+_ZN5Peach6state0Ev                = 0x02144170;
+_ZN5Peach6state1Ev                = 0x02144954;
+_ZN5Peach6state2Ev                = 0x02144060;
+_ZN5Peach13loadResourcesEv        = 0x02144DAC;
+
+_ZN5Peach7profileE                = 0x02146870;
+_ZN5Peach12bottomSensorE          = 0x021464A4;
+
+_ZTV5Peach                        = 0x0214687C;
+
+
 /* arm9_ov42 */
 /*----------------------------------------------------------------*/
 /*-------------------------- bullet bill -------------------------*/
@@ -6931,6 +7022,7 @@ _ZN7TileGod7profileE				= 0x0216D3B4;
 
 _ZTV7TileGod						= 0x0216D3C0;
 
+
 /* arm9_ov54 */
 /*----------------------------------------------------------------*/
 /*-------------------------- checkpoint --------------------------*/
@@ -7155,7 +7247,7 @@ _ZN13LakituSpawner9callStateEv 						= 0x02175F34;
 _ZN13LakituSpawner11switchStateERKMS_FbvE			= 0x02175F7C;
 _ZN13LakituSpawner9mainStateEv 						= 0x02175B64;
 _ZN13LakituSpawner12attachLakituEv 					= 0x02175D78;
-_ZN13LakituSpawner13updateSpawnerEP6Playerj 		= 0x02175D8C;
+_ZN13LakituSpawner13updateSpawnerEP6Playerm 		= 0x02175D8C;
 _ZN13LakituSpawner11spawnLakituEP6Player 			= 0x02175E28;
 _ZN13LakituSpawner15targetAvailableEP6Player 		= 0x02175EC4;
 _ZN13LakituSpawner13loadResourcesEv 				= 0x02176008;
@@ -7193,9 +7285,9 @@ _ZN6Lakitu12damagePlayerER14ActiveColliderR6Player 		= 0x02176C28;
 _ZN6Lakitu16updateVisibilityEv 							= 0x02176198;
 _ZN6Lakitu21updateDestroyCooldownEv						= 0x021779E4;
 _ZN6Lakitu12detachLakituEv	 							= 0x02177A40;
-_ZN6Lakitu23getTargetPlayerDistanceENS_6TargetEPiS1_	= 0x02176930;
+_ZN6Lakitu23getTargetPlayerDistanceENS_6TargetEPlS1_	= 0x02176930;
 _ZN6Lakitu10throwSpinyEP11StageEntity					= 0x02177CFC;
-_ZN6Lakitu20updateTargetVelocityEj 						= 0x02177FD8;
+_ZN6Lakitu20updateTargetVelocityEm 						= 0x02177FD8;
 _ZN6Lakitu11updateStateEv 								= 0x02178598;
 _ZN6Lakitu11switchStateEMS_FbvE 						= 0x021785CC;
 _ZN6Lakitu9mainStateEv 									= 0x02177DC8;
